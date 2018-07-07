@@ -1,0 +1,189 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="content/css/index.css">
+
+</head>
+<body>
+
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    
+  </div>
+</div>
+  
+  <div class="container-fluid">
+       <div class="row">
+      <div class="col-sm-12 col-md-5"> 
+        <div class="form-group">
+          <input type="text" class="form-control" id="moviename" name="username" placeholder="Search Movie Names">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-5" >
+        <div class="form-group">
+           <input type="text" class="form-control" id="id" name="password" placeholder="Search by IMDb Id">
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-2" > 
+
+        <button type="submit" id="submit" class="btn btn-primary" style="width: 100%">Search</button>
+        
+      </div>
+      <div class="loader"> </div>
+      <div class="loaderMessage">Loading...</div>
+    </div>
+
+  <div class="row" id="result" >
+    <div class="col-md-4">
+      <img class="img-fluid" src="mainimage.jpg" alt="Card image" id="image" style="width:400px; height: 320px" >
+    </div>
+    
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <p id="title"> </p>
+          <div class="subdetails">
+            <div id="year" class="inline"> </div> 
+            <div class="inline"> |</div>
+            <div id="duration" class="inline"></div>
+          </div>
+          <div class="movieDetails" id="moviedescription"> </div>
+          <div class="language" id="language"></div>
+          <div class="rating"> <strong>Rating :</strong>
+            <span id="1"  class="fa fa-star"></span>
+            <span id="2"  class="fa fa-star"></span>
+            <span id="3" class="fa fa-star"></span>
+            <span id="4" class="fa fa-star"></span>
+            <span id="5" class="fa fa-star"></span>
+          </div>
+          <div class="moredetails">
+            <button type="button" class="btn btn-info" data-toggle="modal" id="modelid" data-target="#myModal">View More Details...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+      <h4 class="modal-title"> <p id="modeltitle"> </p></h4>
+        </div>
+        <div class="modal-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6">
+              <div class="actor" id="actor"></div>  
+              <div class="actor" id="boxoffice"></div>  
+              <div class="actor" id="counter"></div>  
+              <div class="actor" id="dvd"></div>  
+              <div class="actor" id="director"></div>  
+              <div class="actor" id="genre"></div>  
+              <div class="actor" id="metascore"></div>  
+              <div  id="rated"></div>
+          </div>
+
+        <div class="col-sm-6 col-md-6">
+
+
+              <div id="released"> </div>
+
+              <div  id="type"> </div>
+              <div  id="website"> </div>
+              <div id="writer"> </div>
+              <div  id="imdb-id"> </div>
+              <div  id="imdb-rating"></div>
+              <div  id="imdb-vote"> </div>
+                     
+                       
+
+
+        </div>
+
+      </div>
+
+
+<div class="row">
+
+
+        <div class="col-sm-6 col-md-6">
+
+<div class="ratingheader"> </div>
+                          
+ <div id="ratingappend1"></div>
+
+</div>
+        <div class="col-sm-6 col-md-6">
+
+                       
+  <p class="text-left RatingColor"> <strong>&nbsp;<strong></p>
+
+<div id="ratingappend2"></div>
+
+</div>
+
+</div>
+
+
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+<div class="modal fade" id="alertmodel" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content alert">
+        <div class="modal-header">
+          <h4 class="modal-title">!! Alert Message !!</h4>
+        </div>
+        <div class="modal-body">
+        <div id="errorMeesage"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<script src="content\jquery\moviesearch.js"></script>
+</body>
+</html>
