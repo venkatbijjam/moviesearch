@@ -3,7 +3,9 @@ $(document).ready(() =>{
 
   $('#submit').click(function(){
   
-    
+    $('#landingmessage').hide();
+  $('#messagedisplay').hide();
+      
 
 
     movieDetails();
@@ -46,7 +48,8 @@ else{
             $('.loader').css('display','none');
     $('.loaderMessage').css('display','none');
     
-
+    $('#landingmessage').show();
+  $('#messagedisplay').show();
         }
         else{
           console.log(data);
